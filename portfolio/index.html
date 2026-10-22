@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Designer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header / Nav -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">Portfolio.ui</div>
+      <button class="burger-btn" aria-label="Toggle Menu">☰</button>
+      <nav class="nav">
+        <a href="#cases" class="nav__link">Cases</a>
+        <a href="#about" class="nav__link">About Me</a>
+        <a href="#prices" class="nav__link">Prices</a>
+        <a href="#contacts" class="nav__link">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">UI/UX Designer Portfolio</h1>
+        <p class="hero__subtitle">Creating intuitive digital experiences & UI/UX solutions</p>
+        <a href="#cases" class="btn btn--primary">View Cases</a>
+      </div>
+      <div class="hero__image-placeholder"></div>
+    </div>
+  </section>
+
+  <!-- 3. Grid Section (Cases) -->
+  <section id="cases" class="cases">
+    <div class="container">
+      <h2 class="section-title">Featured Cases</h2>
+      <div class="cases__grid">
+        <article class="card">
+          <div class="card__image"></div>
+          <h3 class="card__title">Fintech Banking App</h3>
+        </article>
+        <article class="card">
+          <div class="card__image"></div>
+          <h3 class="card__title">E-Commerce Redesign</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Feedback Form -->
+  <section id="contacts" class="feedback">
+    <div class="container">
+      <h2 class="section-title">Start a Project</h2>
+      <form class="form">
+        <div class="form__group">
+          <label for="name" class="form__label">Name</label>
+          <input type="text" id="name" class="form__input" required>
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">Email</label>
+          <input type="email" id="email" class="form__input" required>
+        </div>
+        <div class="form__group">
+          <label for="ts-link" class="form__label">Link to Technical Specifications</label>
+          <input type="url" id="ts-link" class="form__input">
+        </div>
+        <button type="submit" class="btn btn--primary form__btn">Send Request</button>
+      </form>
+    </div>
+  </section>
+
+<!-- 5. Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__socials">
+        <a href="#" class="footer__link">Behance</a> | 
+        <a href="#" class="footer__link">Dribbble</a>
+      </div>
+      <div class="footer__copyright">© 2026 UI/UX Designer Portfolio</div>
+      <div class="footer__theme-toggle" id="theme-toggle">☀️ / 🌙</div>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+
+</body>
+</html>
